@@ -42,8 +42,9 @@ fn main() -> io::Result<()> {
     let sys = actix_rt::System::new("r2d2-example");
 
     // r2d2 pool
-    let db_url = std::env::var("DATABASE_URL").expect("DATABASE_URL");
-    let manager = PostgresConnectionManager::new(db_url,TlsMode::None)
+    let url = std::env::var("DATABASE_URL").expect("DATABASE_URL not defined");
+    let target = std::env::var("TARGET").expect("TARGET not defined");
+    let manager = PostgresConnectionManager::new(url,TlsMode::None)
         .expect("Unable to connect to database");
     let pool = r2d2::Pool::new(manager).unwrap();
 
@@ -54,7 +55,7 @@ fn main() -> io::Result<()> {
             .wrap(middleware::Logger::default())
             .route("/{name}", web::get().to_async(index))
     })
-    .bind("127.0.0.1:8080")?
+    .bind(target)?
     .start();
 
     sys.run()
