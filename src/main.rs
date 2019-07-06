@@ -1,4 +1,3 @@
-//! Actix web r2d2 example
 extern crate postgres;
 use std::io;
 
