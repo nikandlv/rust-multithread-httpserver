@@ -1,8 +1,8 @@
-## rust-multithread-httpserver
+## Rust multithread httpserver
 
-> a multithreaded boilerplate for building microservices with postgres support implemented
+> a multithreaded boilerplate for building microservices with postgres support
 
-This is a blazing fast frontend node for our microservice network
+This is a blazing fast node for building a microservice network
 
 #### Features
 
@@ -10,6 +10,7 @@ This is a blazing fast frontend node for our microservice network
 * Shared database pool
 * dotenv configuration
 * Modularized handlers
+* pgql, mysql, sqlite support
 
 #### Libraries
 
