@@ -1,6 +1,6 @@
 [package]
-name = "nifty-core-authentication"
-version = "0.1.0"
+name = "rust-multithread-httpserver"
+version = "0.0.1"
 authors = ["Nikan Dalvand <nikandalvand@gmail.com>"]
 edition = "2018"
 
