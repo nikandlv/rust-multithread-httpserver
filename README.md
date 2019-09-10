@@ -22,6 +22,6 @@ This is a blazing fast node for building a microservice network
 
 
 ### Run
-
-`cargo run`
-
+```console
+nikandlv@nikandlv.ir:~$ cargo run
+```
