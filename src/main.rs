@@ -15,7 +15,7 @@ fn main() -> io::Result<()> {
     std::env::set_var("RUST_LOG", "actix_web=debug");
     dotenv::dotenv().ok();
     env_logger::init();
-    let sys = actix_rt::System::new("nifty-core-authentication");
+    let sys = actix_rt::System::new("rust-multithread-httpserver");
 
     // r2d2 pool
     let url = std::env::var("DATABASE_URL").expect("DATABASE_URL not defined");
